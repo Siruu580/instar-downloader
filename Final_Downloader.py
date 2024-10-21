@@ -49,7 +49,7 @@ def Downloader(username):
                 next_buttons = driver.find_elements(By.XPATH, "//button[@aria-label='다음']")
                 for button in next_buttons:
                     if button.is_displayed():
-                        driver.execute_script("arguments[0].scrollIntoView(true);", button)
+                        driver.execute_script("arguments[0].scrollIntoView(false);", button)
                         time.sleep(1)
                         button.click()
                         time.sleep(2)
